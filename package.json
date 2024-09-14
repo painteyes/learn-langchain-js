@@ -1,0 +1,17 @@
+{
+    "dependencies": {
+        "@langchain/core": "^0.3.0",
+        "@langchain/langgraph": "^0.2.3",
+        "@langchain/openai": "^0.3.0",
+        "@supabase/supabase-js": "^2.45.4",
+        "dotenv": "^16.4.5",
+        "langchain": "^0.3.0",
+        "langsmith": "^0.1.55"
+    },
+    "devDependencies": {
+        "vite": "^5.4.5"
+    },
+    "scripts": {
+        "dev": "vite"
+    }
+}
