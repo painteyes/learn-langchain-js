@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "target": "ES2020",            // Versione JavaScript target
+        "module": "ESNext",            // Sistema di moduli (ESNext)
+        "outDir": "./dist",            // Cartella di output
+        "rootDir": "./src",            // Cartella sorgente
+        "strict": true,                // Controlli di tipo stretti
+        "esModuleInterop": true,       // Compatibilità con moduli CommonJS
+        "moduleResolution": "node"     // Risoluzione moduli in stile Node.js
+    },
+    "include": ["src/**/*"],
+    "exclude": ["node_modules"]
+}

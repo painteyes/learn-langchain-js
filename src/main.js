@@ -1,21 +1,19 @@
 import './style.css';
-import { RecursiveCharacterTextSplitter } from "langchain/text_splitter";
 
-try {
-    const result = await fetch('/data/knowledge_base.txt');
-    const text = await result.text();
+const API_URL = 'http://localhost:5000'; 
 
-    const splitter = new RecursiveCharacterTextSplitter();
-    const output = await splitter.createDocuments([text]);
-
-    createHTML(output);
-} catch(err) {
-    console.error(err);
+async function fetchData() {
+    try {
+        const response = await fetch(`${API_URL}/text-splitter`);
+        const splitDocuments = await response.json();  
+        createHTML(splitDocuments.data);
+    } catch (err) {
+        console.error(err);
+    }
 }
 
-function createHTML(arrayList) {
-
-    arrayList.forEach(chunck => {
+function createHTML(data) {
+    data.forEach(chunck => {
         let content = chunck.pageContent;
         let metaData = chunck.metadata;
 
@@ -39,3 +37,5 @@ function createHTML(arrayList) {
         document.body.append(div);
     });
 }
+
+fetchData();

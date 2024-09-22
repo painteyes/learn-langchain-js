@@ -1,8 +1,12 @@
 # dependencies
 /node_modules
+/package-lock.json
 
-# misc
-.env
+# server
+/server/node_modules
+/server/.env
+/server/package-lock.json
+
 
 # doc
 /doc/*
