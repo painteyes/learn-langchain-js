@@ -6,7 +6,3 @@
 /server/node_modules
 /server/.env
 /server/package-lock.json
-
-
-# doc
-/doc/*
